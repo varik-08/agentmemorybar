@@ -1,0 +1,39 @@
+name: Draft release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing version tag (for example v0.1.0)
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: release-${{ github.event.inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref_name }}
+      - name: Check release version
+        env:
+          RELEASE_TAG: ${{ github.event.inputs.tag || github.ref_name }}
+        run: |
+          test "$RELEASE_TAG" = "v$(cat VERSION)"
+          git show-ref --verify "refs/tags/$RELEASE_TAG"
+      - run: bash scripts/test.sh
+      - run: bash scripts/build.sh
+      - run: bash scripts/dmg.sh
+      - name: Create draft with assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.inputs.tag || github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" build/*.dmg build/SHA256SUMS \
+            --verify-tag --draft --title "AgentMemoryBar $RELEASE_TAG" \
+            --notes-file docs/RELEASE_NOTES.md

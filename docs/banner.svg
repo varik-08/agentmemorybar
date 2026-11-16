@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="460" viewBox="0 0 1100 460">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101d2b"/><stop offset="1" stop-color="#122a2d"/></linearGradient></defs>
+<rect width="1100" height="460" rx="28" fill="url(#bg)"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">
+<rect x="52" y="54" width="128" height="30" rx="15" fill="#244238"/>
+<text x="69" y="74" font-size="13" font-weight="600" fill="#80ebbc">MADE FOR macOS</text>
+<text x="52" y="164" font-size="47" font-weight="700" fill="#f5f9ff">AgentMemoryBar</text>
+<text x="54" y="207" font-size="22" fill="#b8c9da">Your agent’s memory,</text>
+<text x="54" y="240" font-size="22" fill="#b8c9da">one click away.</text>
+<circle cx="62" cy="305" r="6" fill="#41dfa0"/>
+<text x="80" y="311" font-size="16" fill="#d4e4ef">Native. Local. Within reach.</text>
+<text x="54" y="400" font-size="14" fill="#829fae">Independent companion for agentmemory</text>
+<rect x="624" y="35" width="420" height="43" rx="14" fill="#33434b"/>
+<g fill="none" stroke="#e2eff5" stroke-width="2"><rect x="925" y="47" width="21" height="18" rx="3"/><path d="M921 50h4m-4 6h4m-4 6h4m21-12h4m-4 6h4m-4 6h4M930 43v4m6-4v4m6-4v4m-12 18v4m6-4v4m6-4v4"/></g>
+<circle cx="963" cy="56" r="4" fill="#41dfa0"/>
+<rect x="612" y="91" width="432" height="322" rx="17" fill="#0a151d" opacity=".35"/>
+<rect x="606" y="85" width="432" height="322" rx="17" fill="#23333d" stroke="#4c626d"/>
+<circle cx="631" cy="116" r="5" fill="#41dfa0"/>
+<text x="647" y="122" font-size="17" font-weight="600" fill="#ecf6fc">Server running</text>
+<text x="629" y="150" font-size="12" fill="#a1b9c6">Start server when app opens: on</text>
+<path d="M620 168h404" stroke="#435763"/>
+<g font-size="16" fill="#e2eff5"><text x="629" y="200" opacity=".45">Start agentmemory</text><text x="629" y="234">Stop agentmemory</text><text x="629" y="268">Restart server</text></g>
+<path d="M620 287h404" stroke="#435763"/>
+<text x="629" y="318" font-size="16" fill="#e2eff5">Open memory viewer</text>
+<text x="629" y="353" font-size="16" fill="#e2eff5">✓ Launch app at login</text>
+<text x="629" y="387" font-size="13" fill="#9bb3c1">No polling timer. No restart loop.</text>
+</g></svg>

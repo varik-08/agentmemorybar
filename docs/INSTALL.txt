@@ -1,0 +1,18 @@
+AgentMemoryBar 0.1.0
+
+1. Drag AgentMemoryBar.app into Applications.
+2. Eject this disk image and open the installed app.
+3. Use the memory chip icon in the menu bar.
+4. Select “Launch app at login” if desired.
+
+Requires macOS 13+, Node.js 20+, and a separately initialized agentmemory installation.
+Upstream: https://github.com/rohitg00/agentmemory
+
+For custom Node.js paths, use Settings in the menu.
+Stop agentmemory remembers to leave the server stopped next time.
+Quit AgentMemoryBar removes the icon but leaves the server running.
+
+This build may be ad-hoc signed, without Apple notarization.
+Review the source and verify SHA256SUMS before opening a downloaded build.
+If macOS blocks it, use System Settings > Privacy & Security > Open Anyway.
+Do not disable Gatekeeper system-wide.
